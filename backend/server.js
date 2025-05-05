@@ -10,6 +10,10 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use('/api/auth', authRoutes)
 
+app.get('/ping',(req,res)=>{
+res.send('PONG)
+});
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`);
