@@ -34,9 +34,9 @@ async function authFetch(url, options = {}) {
   return res.json()
 }
 
-const fetchPendingUsers = () => authFetch('http://authentication-system-deployment-api.vercel.app/api/auth/pending', { method: 'GET' })
+const fetchPendingUsers = () => authFetch('https://authentication-system-deployment-api.vercel.app/api/auth/pending', { method: 'GET' })
 
-const approveUser = (userId) => authFetch(`http://authentication-system-deployment-api.vercel.app/api/auth/approve/${userId}`, { method: 'PUT' })
+const approveUser = (userId) => authFetch(`https://authentication-system-deployment-api.vercel.app/api/auth/approve/${userId}`, { method: 'PUT' })
 
 function Admin() {
   const queryClient = useQueryClient()
